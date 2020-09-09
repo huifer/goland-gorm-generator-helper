@@ -1,0 +1,28 @@
+<idea-plugin>
+  <id>gorm-plugin</id>
+  <name>gorm-gen</name>
+  <vendor email="huifer97@163.com" url="https://github.com/huifer">HuiFer</vendor>
+
+  <description><![CDATA[
+    This plugin helps you to generate specific template code by create table sql
+    ]]></description>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.lang</depends>
+  <depends optional="true" config-file="pg1.xml" >com.intellij.modules.java</depends>
+  <depends optional="true" config-file="pg2.xml">com.intellij.modules.ultimate</depends>
+  <depends optional="true" config-file="pg3.xml">com.intellij.modules.idea</depends>
+  <depends optional="true" config-file="pg4.xml">com.intellij.modules.go</depends>
+  <depends optional="true" config-file="pg5.xml">com.intellij.modules.all</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+  </extensions>
+
+  <actions>
+    <action id="A" class="com.github.huifer.plugin.community.gorm.generator.gui.GormGen" text="gorm-generator"
+      description="gorm-generator">
+      <add-to-group group-id="HelpMenu" anchor="last"/>
+    </action>
+  </actions>
+</idea-plugin>

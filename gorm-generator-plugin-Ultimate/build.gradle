@@ -1,0 +1,50 @@
+/*
+ *
+ * Copyright 2020-2020 HuiFer All rights reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ */
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '0.4.22'
+}
+
+group 'com.github.huifer.plugin'
+version '1.0'
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+
+
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+    version '2020.2.1'
+    sandboxDirectory = "${rootProject.rootDir}/idea-sandbox"
+    type 'IU'
+    plugins = ['java', 'DatabaseTools', 'Velocity']
+}
+patchPluginXml {
+    changeNotes """This plugin helps you to generate specific template code by database tools"""
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
