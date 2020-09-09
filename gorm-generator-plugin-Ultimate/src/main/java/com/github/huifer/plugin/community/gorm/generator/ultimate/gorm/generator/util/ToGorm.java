@@ -42,7 +42,7 @@ public class ToGorm {
           .append(MySqlDataType.convertToGoType(column.getTypeStr())).append("  ");
 
       if (column.isPrimaryKey()) {
-        s.append("`gorm:\"column:").append(column.getName()).append("  ").append("json:")
+        s.append("`gorm:\"primaryKey;column:").append(column.getName()).append("  ").append("json:")
             .append("\"")
 
             .append(CaseFormat.LOWER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, columnName))
