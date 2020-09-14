@@ -30,10 +30,8 @@ public class ToGorm {
       if (column.getName().equals(apply.getPrimaryKey())) {
         s.append("`gorm:\"primaryKey;column:").append(column.getName()).append("  ").append("json:")
             .append("\"")
-
             .append(CaseFormat.LOWER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, columnName))
             .append("\"").append("`").append("\r\n");
-
       }
       else {
         s.append("`gorm:\"column:").append(column.getName()).append("\"").append("  ")

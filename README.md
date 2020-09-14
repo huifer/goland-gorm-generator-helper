@@ -8,6 +8,11 @@
     
 
 
+## Install
+
+<script defer src="https://plugins.jetbrains.com/assets/scripts/mp-widget.js"></script>
+
+
 ## Contributions
 
 - [HuiFer](http://github.com/huifer/)

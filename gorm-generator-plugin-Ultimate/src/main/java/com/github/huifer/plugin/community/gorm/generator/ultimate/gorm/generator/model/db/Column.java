@@ -26,6 +26,25 @@ public class Column {
   private String comment;
   private boolean isPrimaryKey;
   private String property;
+  private boolean autoIncrement;
+
+  private int size;
+
+  public int getSize() {
+    return size;
+  }
+
+  public void setSize(int size) {
+    this.size = size;
+  }
+
+  public boolean isAutoIncrement() {
+    return autoIncrement;
+  }
+
+  public void setAutoIncrement(boolean autoIncrement) {
+    this.autoIncrement = autoIncrement;
+  }
 
   public Column() {
   }

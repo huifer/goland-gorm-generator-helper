@@ -29,7 +29,6 @@ import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.LangDataKeys;
 import com.intellij.psi.PsiElement;
 import com.intellij.util.containers.JBIterable;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -77,7 +76,8 @@ public class Ademo extends AnAction {
     }
     if (dbTableList.isEmpty()) {
       return;
-    } else {
+    }
+    else {
       if (new Dialog(tb).showAndGet()) {
 
       }
@@ -96,18 +96,19 @@ public class Ademo extends AnAction {
     List<Column> columnsList = new ArrayList<>();
 
     for (DasColumn column : columns) {
-
       DataType dataType = column.getDataType();
       String columnName = column.getName();
       String columnComment = column.getComment();
       String typeName = dataType.typeName;
+
       Column column1 = new Column();
       column1.setComment(columnComment);
       column1.setName(columnName);
       column1.setType(typeName);
       column1.setTypeStr(typeName);
       column1.setPrimaryKey(DasUtil.isPrimary(column));
-
+      boolean auto = DasUtil.isAuto(column);
+      column1.setAutoIncrement(auto);
       columnsList.add(column1);
     }
     return columnsList;
