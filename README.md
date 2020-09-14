@@ -10,7 +10,13 @@
 
 ## Install
 
-<script defer src="https://plugins.jetbrains.com/assets/scripts/mp-widget.js"></script>
+
+
+<iframe frameborder="none" width="384px" height="319px" src="https://plugins.jetbrains.com/embeddable/card/15040"></iframe>
+
+
+
+<iframe frameborder="none" width="384px" height="319px" src="https://plugins.jetbrains.com/embeddable/card/15034"></iframe>
 
 
 ## Contributions
